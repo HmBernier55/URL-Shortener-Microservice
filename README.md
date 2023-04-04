@@ -13,6 +13,12 @@ The code includes two API routes:
         short_url: <random int>
     }
     ```
+    * If the inputted website is not formatted correctly, an error in the form of a JSON object will return:
+    ```
+    {
+        error: "invalid url"
+    }
+    ```
     * If the website has already been inputted before, the code will pull that data from the database and return it in the same format as above
 * `/api/shorturl/:shorturl`
     * GET route that redirects the user to the URL that corresponds to the inputted short URL
